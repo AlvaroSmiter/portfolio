@@ -197,7 +197,7 @@ align-items: center;
 width: 90%;
 }
 
-.informacao {
+.primeira {
 width: 300px;
 height: 300px;
 border-radius: 100%;
@@ -205,19 +205,45 @@ margin: 3rem 0 0 0;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: rgb(236, 234, 241);
-background-image: url(img/pp.jpg);
+background-color: rgb(21, 15, 35);
+background-image: url(img/peq.jpg);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 filter: grayscale(0.5);
-color: black;
+color: rgb(246, 251, 255);
 cursor: pointer;
 transition: 0.5s ease-in-out;
 
 }
 
 
+.primeira-texto {
+width: 4px;
+letter-spacing: 1px;
+color: antiquewhite;
+}
+
+.primeira-1 {
+text-align: center;
+display: flex;
+flex-direction:  column;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.primeira-1::before {
+content: "";
+position: absolute;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+display: block;
+border: 1px solid #f4f4f7;
+opacity: 0;
+transition: 0.5s ease-in-out;
+}
 
 
 
