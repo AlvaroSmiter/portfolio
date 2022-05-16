@@ -35,15 +35,15 @@ h2 {
 }
 
 .midia-social{
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
 }
 
 .midia-social a {
     text-decoration: none;
-    color: black;
+    color: rgb(247, 28, 28);
     padding: 1rem 4rem;
-    border: 2px solid #b9b9d1;
+    border: 2px solid #f4f4f7;
     min-width: 4rem;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@ a:hover {
     align-items: center;
 }
 
-.efeito {
+.checkbox {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -75,26 +75,27 @@ a:hover {
     transition: 400ms ease-in-out 0s;
 }
 
-.efeito .vestigio {
-    height: 2px;
+.checkbox .vestigio {
     width: 50px;
+    height: 2px;
+    background-color: rgb(193, 44, 44);
     position: absolute;
     border-radius: 4px;
-    transition: 400ms ease-in-out 0s;
-    background-color: black;
+    transition: 0,5s ease-in-out;
+    
 }
 
-.efeito .vestigio:nth-child(1){
+.checkbox .vestigio:nth-child(1) {
    top: 26px;
    transform: rotate(0);
 }
 
-.efeito .vestigio:nth-child(2){
+.checkbox .vestigio:nth-child(2) {
     top: 46px;
     transform: rotate(0);
  }
 
- .efeito .vestigio:nth-child(3){
+ .checkbox .vestigio:nth-child(3) {
     top: 66px;
     transform: rotate(0);
  }
@@ -106,15 +107,15 @@ a:hover {
  /* menu*/
  .menu {
      position: absolute;
-     top: 2px;
+     top: 28px;
      right: 30px;
      background-color: transparent;
      height: 4px;
-     width: 10px;
+     width: 40px;
      border-radius: 50%;
      box-shadow: 0px 0px 0px 0px #fff;
      z-index: -1;
-     transition: 400ms ease-in-out 0;
+     transition: 400ms ease-in-out 0s;
  } 
 
  .menu-itens {
@@ -122,14 +123,14 @@ a:hover {
      top: 0;
      left: 0;
      width: 100%;
-     height: 100%;
+     height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
      z-index: 2;
      opacity: 0;
      visibility: hidden;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
  }
 
  .menu-itens ul {
@@ -137,5 +138,43 @@ a:hover {
 }
 
 .menu-itens ul li a {
-   
+   margin: 10px 0;
+   color: rgb(27, 26, 26);
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   font-size: 40px;
 }
+
+#alternador:checked + .checkbox .vestigio:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#alternador:checked +.checkbox .vestigio:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#alternador:checked + .checkbox .vestigio:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#alternador:checked + .checkbox {
+    background-color: #fff;
+}
+
+#alternador:checked ~ .menu {
+    box-shadow: 0px 0px 0px 100vmax #fff;
+    z-index: 1;
+}
+
+#alternador:checked ~ .menu-itens {
+    visibility: visible;
+    opacity: 1;
+}
+
+
