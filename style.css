@@ -246,7 +246,46 @@ transition: 0.5s ease-in-out;
 }
 
 
+.primeira-1 h2 {
+font-size: 40px;
+text-transform: uppercase;
+letter-spacing: 4px;
+margin: 0;
+transition: 0,5s ease-in-out;
+}
 
+
+
+.primeira-1 p {
+font-size: 0%;
+visibility: visible;
+opacity: 0;
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.5s ease-in-out;
+}
+
+
+.primeira-1:hover {
+filter: unset;
+}
+
+
+
+.primeira-1:hover > .primeira-1 ::before {
+height: 200px;
+width: 200px;
+opacity: 1;
+}
+
+.primeira-1:hover > .primeira-1 p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+    }
+
+    
+ 
 
 
 
